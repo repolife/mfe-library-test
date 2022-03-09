@@ -36,6 +36,10 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        type: "asset/resource",
+      },
     ],
   },
 
@@ -46,7 +50,7 @@ module.exports = {
       name: "host",
       filename: "remoteEntry.js",
       remotes: {
-        remote: "remote@http://localhost:3001/remoteEntry.js",
+        // remote: "remote@http://localhost:3001/remoteEntry.js",
       },
       exposes: {},
       shared: {
